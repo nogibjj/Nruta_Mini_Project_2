@@ -5,9 +5,20 @@ format:
 	black *.py
 
 lint:
-	pylint --disable=R,C --ignore-patterns=test_*?py *.py
+	#pylint --disable=R,C --ignore-patterns=test_*?py *.py
+	ruff check *.py mylib/*.py
+
+container-lint:
+	docker run --rm -i hadolint/hadolint < Dockerfile
 
 test:
-	python -m pytest -cov=main test_main.py
+	python -m pytest -cov=main --covmylib test_*.py
+
+generate_and_push:
+	python sustainable_fashion.py
+	git config --local user.email "action@github.com"
+	git config --local user.name "GitHub Action"
+	git commit -m "tes"
+	git push
 
 all: install format lint test
