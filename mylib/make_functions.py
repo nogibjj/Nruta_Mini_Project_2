@@ -10,14 +10,20 @@ def load_dataset(filepath):
 
 # Defining functions for summary statistics
 def calculate_mean(df, col):
+    if df[col].empty:
+        return None
     return df[col].mean()
 
 
 def calculate_median(df, col):
+    if df[col].empty:
+        return None
     return df[col].median()
 
 
 def calculate_std_dev(df, col):
+    if df[col].empty:
+        return None
     return df[col].std()
 
 
