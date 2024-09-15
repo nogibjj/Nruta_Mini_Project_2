@@ -24,6 +24,8 @@ def calculate_median(df, col):
 def calculate_std_dev(df, col):
     if df[col].empty:
         return None
+    if len(df[col]) == 1:
+        return 0
     return df[col].std()
 
 
