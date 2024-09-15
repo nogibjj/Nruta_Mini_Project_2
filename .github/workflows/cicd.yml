@@ -1,0 +1,31 @@
+name: CI-CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: list files for debugging
+        run: ls -R
+      
+      - name: install packages
+        run: make install
+      
+      - name: format code
+        run: make format
+      
+      - name: lint code
+        run: make lint
+      
+      - name: run tests
+        run: make test
