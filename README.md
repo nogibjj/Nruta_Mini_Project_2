@@ -1,5 +1,4 @@
 # Nruta_Mini_Project_2
-## feeback from assignment 1: Readme is a little light but that's ok because its a template.
 
 Week 2 mini project wherein we make Pandas Descriptive Statistics Script
 
