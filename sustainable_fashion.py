@@ -1,4 +1,12 @@
-from mylib.make_functions import *
+from mylib.make_functions import (
+    load_dataset,
+    calculate_mean,
+    calculate_median,
+    calculate_std_dev,
+    calculate_summary,
+    bar_plot,
+    pie_chart,
+)
 
 filepath = "sustainable_fashion_trends_2024.csv"
 
@@ -41,6 +49,11 @@ def generate_plots(df, x_col, y_col, plot_title, xlabel, ylabel, pie_col, pie_ti
 
     # Distribution of material types
     pie_chart(df, pie_col, pie_title)
+
+
+def save_to_md():
+    with open("test.md", "a") as file:
+        file.write("test")
 
 
 # Parameters for the analysis
