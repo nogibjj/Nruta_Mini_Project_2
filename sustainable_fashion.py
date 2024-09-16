@@ -116,3 +116,6 @@ generate_plots(
     pie_title,
     jupyter_render=False,
 )
+
+# Saving it to markdown
+save_to_md()
