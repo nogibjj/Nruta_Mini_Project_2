@@ -36,7 +36,15 @@ def calculate_summary(df):
 # Plotting functions
 # creating a bar chart
 def bar_plot(
-    dataframe, x_column, y_column, title, xlabel, ylabel, color="skyblue", rotation=45
+    dataframe,
+    x_column,
+    y_column,
+    title,
+    xlabel,
+    ylabel,
+    color="skyblue",
+    rotation=45,
+    jupyter_render=False,
 ):
     plt.figure(figsize=(12, 8))
     dataframe.plot(kind="bar", x=x_column, y=y_column, color=color, legend=False)
@@ -45,13 +53,19 @@ def bar_plot(
     plt.ylabel(ylabel)
     plt.xticks(rotation=rotation)
     plt.grid(axis="y")
-    return plt.show()
+    if not jupyter_render:
+        plt.savefig("bar_plot.png")
+    else:
+        plt.show()
 
 
 # creating a pie chart
-def pie_chart(dataframe, column, title):
+def pie_chart(dataframe, column, title, jupyter_render=False):
     plt.figure(figsize=(10, 10))
     dataframe[column].value_counts().plot(kind="pie", autopct="%1.1f%%", startangle=140)
     plt.title(title)
     plt.ylabel("")
-    return plt.show()
+    if not jupyter_render:
+        plt.savefig("pie_chart.png")
+    else:
+        plt.show()

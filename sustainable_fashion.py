@@ -41,19 +41,40 @@ def generate_statistics(df, analysis_col):
 
 
 # generating the plots
-def generate_plots(df, x_col, y_col, plot_title, xlabel, ylabel, pie_col, pie_title):
+def generate_plots(
+    df, x_col, y_col, plot_title, xlabel, ylabel, pie_col, pie_title, jupyter_render
+):
     # Plotting
     # Number of sustainable brands per country
     grouped_data = df.groupby(x_col).size().reset_index(name=y_col)
-    bar_plot(grouped_data, x_col, y_col, plot_title, xlabel, ylabel)
+    bar_plot(grouped_data, x_col, y_col, plot_title, xlabel, ylabel, jupyter_render)
 
     # Distribution of material types
-    pie_chart(df, pie_col, pie_title)
+    pie_chart(df, pie_col, pie_title, jupyter_render)
 
 
 def save_to_md():
-    with open("test.md", "a") as file:
-        file.write("test")
+    # Write the markdown table to a file
+    describe_df = generate_statistics(df, analysis_col)
+    markdown_table = describe_df.to_markdown()
+    generate_plots(
+        df,
+        x_col,
+        y_col,
+        plot_title,
+        xlabel,
+        ylabel,
+        pie_col,
+        pie_title,
+        jupyter_render=False,
+    )
+    with open("sustainable_fashion.md", "a") as file:
+        file.write("Describe:\n")
+        file.write(markdown_table)
+        file.write("\n\n")
+        file.write("![sustainablebrand_viz1](bar_plot.png)\n")
+        file.write("\n\n")
+        file.write("![sustainablebrand_viz2](pie_chart.png)")
 
 
 # Parameters for the analysis
