@@ -19,16 +19,21 @@ def load_df(filepath):
 
 # Generate statistics
 def generate_statistics(df, analysis_col):
-
-    # Displaying the first 5 rows of the dataframe
-    print(df.head())
-
-    # Calculating and printing statistics
+    # Calculating statistics
     mean = calculate_mean(df, analysis_col)
     median = calculate_median(df, analysis_col)
     std_dev = calculate_std_dev(df, analysis_col)
     summary = calculate_summary(df)
 
+    # Creating a DataFrame for the markdown table
+    stats_dict = {
+        "Statistic": ["Mean", "Median", "Standard Deviation"],
+        "Value": [mean, median, std_dev],
+    }
+
+    stats_df = pd.DataFrame(stats_dict)
+
+    # Print statements for debugging (optional)
     print(f"The mean of the data is:\n{mean}")
     print("-----------------------------------------")
     print(f"The median of the data is:\n{median}")
@@ -38,6 +43,8 @@ def generate_statistics(df, analysis_col):
     print(
         f"The summary statistics for the numerical columns in the data are:\n{summary}"
     )
+
+    return stats_df
 
 
 # generating the plots
