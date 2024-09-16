@@ -11,6 +11,14 @@
 - Generate summary statistics (mean, median, standard deviation)
 - Create at least one data visualization
 
+### 📂 Contents of this repository
+- .devcontainer
+- README.md
+- Makefile
+- .github/workflows
+- requirements.txt
+- sustainable_fashion.md
+
 ### 📊 Dataset Description
 The dataset used for this project is Sustainable Fashion: Eco-Friendly Trends from Kaggle. It provides information on sustainable fashion trends with various metrics related to the industry. For more details and to download the dataset, visit this [link](https://www.kaggle.com/datasets/waqi786/sustainable-fashion-eco-friendly-trends).
 
