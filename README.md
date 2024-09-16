@@ -59,7 +59,7 @@ pip install -r requirements.txt
 python sustainable_fashion.py
 ```
 
-3. Generate Markdown and visualizations:
+4. Generate Markdown and visualizations:
 
 - The output summary statistics will be saved in `sustainable_fashion.md`.
 - Visualizations (bar chart and pie chart) will be saved as `bar_plot.png` and `pie_chart.png`.
@@ -89,8 +89,6 @@ The script generates two visualizations:
 
 1. Bar Chart - Displays the number of sustainable fashion brands by the countries.
 2. Pie Chart - Shows the propotion of brands based on the materials they use.
-![Bar plot](bar_plot.png)
-![Pie chart](pie_chart.png)
 
 The statistics and the visualizations for the Sustainability brands data can be viewed through the following link:
 [Click here to view details](sustainable_fashion.md)
