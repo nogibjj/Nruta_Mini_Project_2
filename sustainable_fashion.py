@@ -47,7 +47,17 @@ def generate_plots(
     # Plotting
     # Number of sustainable brands per country
     grouped_data = df.groupby(x_col).size().reset_index(name=y_col)
-    bar_plot(grouped_data, x_col, y_col, plot_title, xlabel, ylabel, jupyter_render)
+    bar_plot(
+        grouped_data,
+        x_col,
+        y_col,
+        plot_title,
+        xlabel,
+        ylabel,
+        color="skyblue",
+        rotation=45,
+        jupyter_render=jupyter_render,
+    )
 
     # Distribution of material types
     pie_chart(df, pie_col, pie_title, jupyter_render)
