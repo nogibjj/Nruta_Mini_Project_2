@@ -18,7 +18,8 @@ generate_and_push:
 	python sustainable_fashion.py
 	git config --local user.email "action@github.com"
 	git config --local user.name "GitHub Action"
-	git commit -m "tes"
+	git add .coverage bar_plot.png pie_chart.png
+	git commit -m "Generate stats and plots"
 	git push
 
 all: install format lint test
