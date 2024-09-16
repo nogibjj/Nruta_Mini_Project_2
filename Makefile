@@ -19,7 +19,7 @@ generate_and_push:
 	git config --local user.email "action@github.com"
 	git config --local user.name "GitHub Action"
 	git add .coverage bar_plot.png pie_chart.png sustainable_fashion.md
-	git commit -m "Generate stats and plots"
+	git commit -m "Generate stats and plots" || true 
 	git push
 
 all: install format lint test
