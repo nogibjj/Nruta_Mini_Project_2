@@ -95,4 +95,14 @@ df = load_df(filepath)
 generate_statistics(df, analysis_col)
 
 # Call generate_plots
-generate_plots(df, x_col, y_col, plot_title, xlabel, ylabel, pie_col, pie_title)
+generate_plots(
+    df,
+    x_col,
+    y_col,
+    plot_title,
+    xlabel,
+    ylabel,
+    pie_col,
+    pie_title,
+    jupyter_render=False,
+)
