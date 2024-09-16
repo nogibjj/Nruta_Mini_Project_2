@@ -64,13 +64,6 @@ python sustainable_fashion.py
 - The output summary statistics will be saved in `sustainable_fashion.md`.
 - Visualizations (bar chart and pie chart) will be saved as `bar_plot.png` and `pie_chart.png`.
 
-### 📦 Installation
-Make sure you have the latest version of Python installed. To install the necessary libraries:
-
-```bash
-pip install pandas matplotlib tabulate
-```
-
 ### 🧪 Testing
 You can run the script and test the output with the dataset provided. To check the correctness of the statistics and visualizations, run:
 
