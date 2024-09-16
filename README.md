@@ -11,24 +11,28 @@
 - Generate summary statistics (mean, median, standard deviation)
 - Create at least one data visualization
 
+## 📊 Dataset Description
+The dataset used for this project is Sustainable Fashion: Eco-Friendly Trends from Kaggle. It provides information on sustainable fashion trends with various metrics related to the industry. For more details and to download the dataset, visit this [link](https://www.kaggle.com/datasets/waqi786/sustainable-fashion-eco-friendly-trends).
+
+
 ## 🚀 How to Run
 1. Clone the repository:
 
 ```bash
-$ git clone https://github.com/nogibjj/Nruta_Mini_Project_2.git
-$ cd Nruta_Mini_Project_2
+git clone https://github.com/nogibjj/Nruta_Mini_Project_2.git
+cd Nruta_Mini_Project_2
 ```
 
 2. Install the required dependencies:
 
 ```bash
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 3. Run the script:
 
 ```bash
-$ python sustainable_fashion.py
+python sustainable_fashion.py
 ```
 
 3. Generate Markdown and visualizations:
@@ -40,14 +44,14 @@ $ python sustainable_fashion.py
 Make sure you have the latest version of Python installed. To install the necessary libraries:
 
 ```bash
-$ pip install pandas matplotlib tabulate
+pip install pandas matplotlib tabulate
 ```
 
 ## 🧪 Testing
 You can run the script and test the output with the dataset provided. To check the correctness of the statistics and visualizations, run:
 
 ```bash
-$ make test
+make test
 ```
 
 ## 📊 Output
@@ -59,5 +63,7 @@ After running the script, you will see:
 ## 🔍 Visualizations
 The script generates two visualizations:
 
-1. Bar Chart - Displays the relationship between selected features.
-2. Pie Chart - Breaks down categories for easier comparison.
+1. Bar Chart - Displays the number of sustainable fashion brands by the countries.
+2. Pie Chart - Shows the propotion of brands based on the materials they use.
+![Bar plot](bar_plot.png)
+![Pie chart](pie_chart.png)
