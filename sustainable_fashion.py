@@ -87,7 +87,7 @@ def save_to_md():
         pie_title,
         jupyter_render=False,
     )
-    with open("sustainable_fashion.md", "a") as file:
+    with open("sustainable_fashion.md", "w") as file:
         file.write("Describe:\n")
         file.write(markdown_table)
         file.write("\n\n")
